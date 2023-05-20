@@ -19,7 +19,7 @@ const clientRooms = {};
 
 app.use(express.static(__dirname + "/frontend/"));
 
-app.get("/", (req,res) => {
+app.get("/main", (req,res) => {
   res.sendFile(__dirname + "/frontend/index.html");
 })
 
