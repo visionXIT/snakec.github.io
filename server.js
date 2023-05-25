@@ -10,7 +10,7 @@ const app = express();
 const http = require('http');
 const io = require('socket.io')(http.createServer(), {
   cors: {
-    origin: ADRESS + ":8000"
+    origin: "https://visionxit.github.io/"
   }
 });
 
@@ -170,4 +170,4 @@ function emitGameOver(room, winner) {
     .emit('gameOver', JSON.stringify({ winner }));
 }
 
-io.listen(process.env.PORT || 3000);
+io.listen(3000);
