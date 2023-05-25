@@ -10,16 +10,16 @@ const app = express();
 const http = require('http');
 const io = require('socket.io')(http.createServer(), {
   cors: {
-    origin: "https://snakec.onrender.com:8000/main"
+    origin: "https://snakec.onrender.com:8000/"
   }
 });
 
 const state = {};
 const clientRooms = {};
 
-app.use(express.static(__dirname + "/frontend/"));
+//app.use(express.static(__dirname + "/frontend/"));
 
-app.get("/main", (req,res) => {
+app.get("/", (req,res) => {
   res.sendFile(__dirname + "/frontend/index.html");
 })
 
