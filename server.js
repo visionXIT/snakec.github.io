@@ -10,7 +10,7 @@ const app = express();
 const http = require('http');
 const io = require('socket.io')(http.createServer(), {
   cors: {
-    origin: "https://snakec.onrender.com/main"
+    origin: "https://snakec.onrender.com:8000/main"
   }
 });
 
